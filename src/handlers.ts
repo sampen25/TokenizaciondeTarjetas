@@ -2,12 +2,10 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
 import { docClient } from "./config/dbClient";
 import { schema } from "./utils/validators";
-//import AWS from "aws-sdk";
 import { v4 } from "uuid";
 import * as Str from '@supercharge/strings'
 import * as yup from "yup";
 
-//const docClient = new AWS.DynamoDB.DocumentClient();
 const tableName = "TokensTable";
 const headers = {
   "content-type": "application/json",
